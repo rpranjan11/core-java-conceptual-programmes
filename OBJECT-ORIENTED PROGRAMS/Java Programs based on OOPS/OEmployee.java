@@ -14,69 +14,70 @@ Write main() method, instantiate object and call all method exactly once.
 [Make suitable assumption if necessary]                                                   */
 
 import java.util.*;
-class Employee{
-private String ecode,ename,epost;
-private double ebasic;
-void input(String eid, String name, String post, double basic){
-ecode=eid;
-ename=name;
-epost=post;
-ebasic=basic;
-}
-double gda(){
-return(ebasic*30/100);
-}
-double ghra(){
-double hra=ebasic*20/100;
-return(hra);
-}
-double gross(){
-return(ebasic+gda()+ghra());
-}
-double gitax(){
-return(gross()*12/100);
-}
-double gnetsal(){
-return(gross()-gitax());
-}
-void print(){
-System.out.println("= = = Employee Salary Details = = = Dated :"+new Date());
-System.out.println("Employee Code :"+ecode);
-System.out.println("Employee Name :"+ename);
-System.out.println("Post/Designation :"+epost);
-System.out.println("Basic Pay in Rs. :"+ebasic);
-System.out.println("Dearness Allowance in Rs. :"+gda());
-System.out.println("House Rent Allowance in Rs. :"+ghra());
-System.out.println("= = = = = = = = = = = = = = = = = =");
-System.out.println("Gross/Total Salary in Rs. :"+gross());
-System.out.println("Income Tax Deduction in Rs. :"+gitax());
-System.out.println("= = = = = = = = = = = = = = = = = =");
-System.out.println("Net Salary in Rs. :"+gnetsal());
-}
+class Employee {
+  private String ecode,ename,epost;
+  private double ebasic;
+  void input(String eid, String name, String post, double basic) {
+     ecode=eid;
+     ename=name;
+     epost=post;
+     ebasic=basic;
+  }
+  double gda() {
+    return(ebasic*30/100);
+  } 
+  double ghra() {
+    double hra=ebasic*20/100;
+    return(hra);
+  }
+  double gross() {
+    return(ebasic+gda()+ghra());
+  }
+  double gitax() {
+    return(gross()*12/100);
+  }
+  double gnetsal() {
+    return(gross()-gitax());
+  }
+  void print() {
+    System.out.println("= = = Employee Salary Details = = = Dated :"+new Date());
+    System.out.println("Employee Code :"+ecode);
+    System.out.println("Employee Name :"+ename);
+    System.out.println("Post/Designation :"+epost);
+    System.out.println("Basic Pay in Rs. :"+ebasic);
+    System.out.println("Dearness Allowance in Rs. :"+gda());
+    System.out.println("House Rent Allowance in Rs. :"+ghra());
+    System.out.println("= = = = = = = = = = = = = = = = = =");
+    System.out.println("Gross/Total Salary in Rs. :"+gross());
+    System.out.println("Income Tax Deduction in Rs. :"+gitax());
+    System.out.println("= = = = = = = = = = = = = = = = = =");
+    System.out.println("Net Salary in Rs. :"+gnetsal());
+  }
 }//Close of class Employee
-class OEmployee{
-public static void main(String args[]){
-Scanner A=new Scanner(System.in);
-Employee E=new Employee();
-System.out.println();
-System.out.print("Enter Employee ecode ::");
-String ecode=A.nextLine().toUpperCase();
-//System.out.println(ecode);
-System.out.print("Enter Employee name ::");
-String ename=A.nextLine().toUpperCase();
-//System.out.println(ename);
-System.out.print("Enter Post/Designation ::");
-String epost=A.nextLine().toUpperCase();
-//System.out.println(epost);
-System.out.print("Enter Basic pay in Rs. ::");
-double ebasic=A.nextDouble();
-//System.out.println(ebasic);
-E.input(ecode,ename,epost,ebasic);
-E.print();
-}//Close of main
+
+class OEmployee {
+  public static void main(String args[]) {
+    Scanner A=new Scanner(System.in);
+    Employee E=new Employee();
+    System.out.println();
+    System.out.print("Enter Employee ecode ::");
+    String ecode=A.nextLine().toUpperCase();
+    //System.out.println(ecode);
+    System.out.print("Enter Employee name ::");
+    String ename=A.nextLine().toUpperCase();
+    //System.out.println(ename);
+    System.out.print("Enter Post/Designation ::");
+     String epost=A.nextLine().toUpperCase();
+    //System.out.println(epost);
+    System.out.print("Enter Basic pay in Rs. ::");
+    double ebasic=A.nextDouble();
+    //System.out.println(ebasic);
+    E.input(ecode,ename,epost,ebasic);
+    E.print();
+  }//Close of main
 }//Close of class OEmployee
 
-///OUTPUT
+//OUTPUT
 
 Enter Employee ecode ::E001
 Enter Employee name ::RAJNISH RANJAN
