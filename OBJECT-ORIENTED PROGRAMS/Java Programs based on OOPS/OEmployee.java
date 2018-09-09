@@ -76,7 +76,7 @@ E.print();
 }//Close of main
 }//Close of class OEmployee
 
-//OUTPUT
+///OUTPUT
 
 Enter Employee ecode ::E001
 Enter Employee name ::RAJNISH RANJAN
