@@ -1,0 +1,13 @@
+# C files
+CONDITIONAL PROGRAMS/*.c
+Java Codes/*.c
+OOPS_PROGRAMS/*.c
+
+# Common files to ignore
+.DS_Store
+.idea/
+*.iml
+*.class
+*.log
+*.out
+node_modules/
